@@ -1,0 +1,33 @@
+{
+  "name": "ts-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dist/index.js",
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/index.js\" \"prisma studio\"",
+    "dev:server": "tsx watch src/index.ts",
+    "dev:prisma": "prisma studio --port 5555",
+    "build": "rimraf dist && tsc",
+    "migrate": "prisma migrate dev --name init"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "express": "^4.21.2",
+    "prisma": "^6.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.15.27",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
