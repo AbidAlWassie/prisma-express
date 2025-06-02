@@ -1,6 +1,6 @@
 import express from "express";
-import postRoutes from "./routes/post.routes.js";
-import userRoutes from "./routes/user.routes.js";
+import postRoutes from "./routes/post.routes";
+import userRoutes from "./routes/user.routes";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
